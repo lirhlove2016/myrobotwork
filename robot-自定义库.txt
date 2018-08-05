@@ -1,0 +1,28 @@
+1.引入自定义库
+	1）将自定义的库文件放到C:\Python27\Lib\site-packages,目录下；
+	2）创建myfile.pth,文件，将项目目录中的库文件目录写到文件中，D:/workdtation/sublime/NTGJAPI/NTGJLibrary；
+2.ride中执行，命令
+	run -d D:\workdtation\sublime\report，report文件夹下保存报告
+3.在自定义库中增加方法，先删除引入库，再次引入，按F5.如果方法可以看到，就可以引入，不可以看到，重启，RIDE
+4.CMD,启动ride.py,命令行进入py27/scripts目录下，python ride.py 启动即可
+5.将py2.7转打py3,用sublime.配置python3,
+只需要安装 robot framework assistant 插件！
+sublime -view-sybtax-robot ,tools-build system-tobot
+
+ 
+修改一下  Robot.sublime-build  配置
+ 
+{
+    "cmd": ["/usr/local/bin/pybot","-d","/Users/***/Desktop/qita/robot_log", "$file"],
+    "selector": "source.robot",
+    "variants": [
+
+        { "name": "Selects the test cases by tag",
+          "cmd": ["python", "-m", "robot.run", "--include", "REPLACE_WITH_TAG", "$file"],
+        },
+
+        { "name": "Selects the test cases by name",
+          "cmd": ["python", "-m", "robot.run", "--test", "REPLACE_WITH_TEST_NAME", "$file"]
+        }
+    ]
+}

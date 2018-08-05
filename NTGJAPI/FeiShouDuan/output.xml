@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180806 01:27:08.637" generator="Robot 3.0.3 (Python 2.7.13 on win32)">
+<suite source="D:\workdtation\sublime\NTGJAPI\FeiShouDuan\YWB.txt" id="s1" name="YWB">
+<test id="s1-t1" name="01_YWB_login">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>步骤1:YWB login</arg>
+</arguments>
+<msg timestamp="20180806 01:27:09.105" level="INFO">步骤1:YWB login</msg>
+<status status="PASS" endtime="20180806 01:27:09.105" starttime="20180806 01:27:09.105"></status>
+</kw>
+<kw name="Ywb Login" library="NTGJLibrary">
+<doc>ywb login  登陆。</doc>
+<arguments>
+<arg>&amp;{testdata_YWB_login_userdata_001}</arg>
+</arguments>
+<assign>
+<var>${flags}</var>
+</assign>
+<msg timestamp="20180806 01:27:09.108" level="FAIL">NameError: global name 'url_string' is not defined</msg>
+<status status="FAIL" endtime="20180806 01:27:09.109" starttime="20180806 01:27:09.106"></status>
+</kw>
+<tags>
+<tag>test</tag>
+</tags>
+<status status="FAIL" endtime="20180806 01:27:09.109" critical="yes" starttime="20180806 01:27:09.104">NameError: global name 'url_string' is not defined</status>
+</test>
+<status status="FAIL" endtime="20180806 01:27:09.110" starttime="20180806 01:27:08.641"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">test</stat>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="YWB" pass="0">YWB</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

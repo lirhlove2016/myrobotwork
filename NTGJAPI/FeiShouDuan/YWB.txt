@@ -1,0 +1,12 @@
+*** Settings ***
+Variables         FeiShouDuan_account_testdata.py
+Variables         System_Management_testdata.py
+Resource          ../UserKeywords/AllUserKeywords.txt
+Variables         Ywb_testdata.py
+
+*** Test Cases ***
+01_YWB_login
+    [Tags]    test
+    log    步骤1:YWB login
+    ${flags}    ywb login    &{testdata_YWB_login_userdata_001}
+    Run Keyword if    ${flags}!=1    Fail
